@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# setup running environment
+
+
+export PATH=$(pwd):$PATH
+export LIGTMAP="$(pwd)"
+# export MGLTools="$(pwd)/mgltools_x86_64Linux2_1.5.6"
+export MGLTools="$(pwd)/MGLTools-1.5.6"
+
 ###############################################
 echo "Checking LigTMap running environment..."
 ###############################################
@@ -30,7 +38,7 @@ else
 fi
 
 ###############################################
-# For large target model, unzip it when we use
+# For large target model, unzip it when we use (unzip Kinase.sav.zip) (single use)
 ###############################################
 if  [ -e $LIGTMAP/Model/Kinase.sav.zip ] && [ ! -e $LIGTMAP/Model/Kinase.sav ] ; then
     cd $LIGTMAP/Model
