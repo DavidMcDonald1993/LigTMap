@@ -76,27 +76,27 @@ JobHomeDir=$PWD
 OutputDir="$JobHomeDir""/Output"
 InputDir="$JobHomeDir""/Input"
 
-if [ -e "$OutputDir"".001" ] ; then
-  tmp=`ls -d ${OutputDir}.* | sort | tail -1`
-  last="${tmp##*.}"
-fi
+# if [ -e "$OutputDir"".001" ] ; then
+#   tmp=`ls -d ${OutputDir}.* | sort | tail -1`
+#   last="${tmp##*.}"
+# fi
 
-if [ -z $last ] ; then
-   last=001
-else
-   add=`expr $last + 1`
-   last=`printf "%03d" $add`
-fi
+# if [ -z $last ] ; then
+#    last=001
+# else
+#    add=`expr $last + 1`
+#    last=`printf "%03d" $add`
+# fi
 
-if [ -e $OutputDir ] ; then
-   echo "Backup existing input/output directory to $last"
-   mv $OutputDir "$OutputDir"".$last"
-   mv $InputDir  "$InputDir"".$last"
-   echo
-fi
+# if [ -e $OutputDir ] ; then
+#    echo "Backup existing input/output directory to $last"
+#    mv $OutputDir "$OutputDir"".$last"
+#    mv $InputDir  "$InputDir"".$last"
+#    echo
+# fi
 
-mkdir $OutputDir
-mkdir $InputDir
+mkdir -p $OutputDir
+mkdir -p $InputDir
 
 #SelectDB="Anticogulant,Beta_secretase,Bromodomain,Carbonic_Anhydrase,Diabetes,Estrogen,HCV,HIV,Hpyroli,Hydrolase,Influenza,Isomerase,Kinase,Ligase,Peroxisome,Transferase,Tuberculosis"
 

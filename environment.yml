@@ -107,7 +107,6 @@ dependencies:
     - packaging==20.9
     - pathlib2==2.3.7.post1
     - pybel==0.12.2
-    - pychem==1.0
     - pygments==2.5.2
     - pyparsing==2.4.7
     - requests==2.27.1
